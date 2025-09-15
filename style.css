@@ -13,15 +13,9 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Container principal para o conteúdo */
-main {
-    max-width: 960px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    flex-grow: 1;
-}
-
-/* Cabeçalho do site */
+/* ---------------------------------------------------- */
+/* REGRAS PARA O CABEÇALHO E MENU (Correção principal) */
+/* ---------------------------------------------------- */
 .site-header {
     text-align: center;
     padding: 3rem 0 2.5rem;
@@ -48,16 +42,15 @@ main {
     font-weight: 300;
 }
 
-/* Estilo do menu de navegação */
 .main-nav {
     margin-top: 2rem;
 }
 
 .main-nav ul {
-    list-style: none;
+    list-style: none; /* Remove os marcadores de lista */
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Transforma a lista em uma linha horizontal */
     justify-content: center;
     gap: 1.8rem;
     flex-wrap: wrap;
@@ -97,22 +90,20 @@ main {
 }
 
 
-/* Seção de posts do blog */
+/* ---------------------------------------------------- */
+/* REGRAS PARA OS CARDS (Para telas maiores) */
+/* ---------------------------------------------------- */
 .blog-posts {
     display: grid;
-    /* Padrão para telas pequenas: uma coluna */
     grid-template-columns: 1fr;
     gap: 2.5rem;
 }
 
-/* Estilo individual de cada post */
 .post-card {
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    /* Define a direção dos elementos dentro do card como coluna, garantindo que a imagem
-       fique acima do texto em todos os tamanhos de tela. */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -132,7 +123,6 @@ main {
     border-bottom: 1px solid #EEEEEE;
 }
 
-/* Conteúdo do post */
 .post-content {
     padding: 1.8rem;
 }
@@ -198,7 +188,9 @@ main {
 }
 
 
-/* Responsividade para telas menores */
+/* ---------------------------------------------------- */
+/* RESPONSIVIDADE (Para telas menores e maiores) */
+/* ---------------------------------------------------- */
 @media (max-width: 600px) {
     .site-title {
         font-size: 2.5rem;
@@ -226,11 +218,8 @@ main {
     }
 }
 
-/* REGRAS PARA TELAS MAIORES */
 @media (min-width: 768px) {
     .blog-posts {
-        /* Cria duas colunas de tamanho igual, permitindo que os cards inteiros
-           fiquem lado a lado */
         grid-template-columns: repeat(2, 1fr);
     }
 }
