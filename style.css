@@ -245,21 +245,32 @@ main {
 /* RESPONSIVIDADE (Para telas menores e maiores) */
 /* ---------------------------------------------------- */
 @media (max-width: 600px) {
+    /* Ajustes para o cabeçalho em telas menores */
+    .site-header {
+        padding: 1.5rem 0 1rem; /* Reduzido o padding superior e inferior */
+    }
     .site-title {
         font-size: 2rem;
     }
     .site-description {
         font-size: 0.9rem;
     }
+    
+    /* Ajustes para o menu de navegação em telas menores */
+    .main-nav {
+        margin-top: 0.8rem; /* Margem reduzida */
+    }
     .main-nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem; /* Espaçamento entre os links reduzido */
     }
     .main-nav a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem; /* Fonte um pouco menor */
+        padding: 0.3rem 0.6rem; /* Padding reduzido para um link mais compacto */
     }
+
+    /* Ajustes para o conteúdo principal */
     .post-card img {
         height: 200px;
     }
@@ -270,6 +281,7 @@ main {
         font-size: 0.95rem;
     }
 
+    /* Ajustes para a nova seção de detalhes do livro */
     .book-details h2 {
         font-size: 1.8rem;
     }
@@ -278,6 +290,9 @@ main {
     }
     .book-info-card h4 {
         font-size: 1rem;
+    }
+    .book-info-card {
+        padding: 1.5rem; /* Reduzido o padding do card de info */
     }
 }
 
