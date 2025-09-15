@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;700&display=swap');
 
-
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #F8F8F8; /* Um cinza muito claro para o fundo */
-    color: #333333; /* Cinza escuro para o texto principal */
+    background-color: #F8F8F8;
+    color: #333333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-behavior: smooth;
 }
 
 /* Container principal para o conteúdo */
 main {
-    max-width: 960px; /* Largura ligeiramente maior */
-    margin: 3rem auto; /* Mais margem superior e inferior */
+    max-width: 960px;
+    margin: 3rem auto;
     padding: 0 1.5rem;
     flex-grow: 1;
 }
@@ -26,25 +25,25 @@ main {
 .site-header {
     text-align: center;
     padding: 3rem 0 2.5rem;
-    background-color: #FFFFFF; /* Fundo branco puro */
-    border-bottom: 1px solid #EEEEEE; /* Borda sutil */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EEEEEE;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .site-title {
-    font-family: 'Lora', serif; /* Fonte serifada elegante para o título */
-    font-size: 3.5rem; /* Título grande */
-    color: #222222; /* Preto suave */
+    font-family: 'Lora', serif;
+    font-size: 3.5rem;
+    color: #222222;
     margin: 0;
-    letter-spacing: -0.5px; /* Ajuste para melhor leitura */
+    letter-spacing: -0.5px;
 }
 
 .site-description {
     font-size: 1.2rem;
-    color: #666666; /* Cinza médio */
+    color: #666666;
     margin-top: 0.8rem;
     font-weight: 300;
 }
@@ -60,28 +59,27 @@ main {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 1.8rem; /* Espaçamento entre os itens do menu */
+    gap: 1.8rem;
     flex-wrap: wrap;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: #555555; /* Cor padrão do texto do link */
-    font-weight: 500; /* Peso médio da fonte */
+    color: #555555;
+    font-weight: 500;
     font-size: 1.05rem;
     padding: 0.6rem 1.2rem;
-    border-radius: 6px; /* Bordas levemente arredondadas */
-    transition: all 0.2s ease-in-out; /* Transição mais rápida e suave */
-    position: relative; /* Para o efeito de sublinhado */
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
 }
 
 .main-nav a:hover {
-    color: #007bff; /* Azul vibrante no hover */
-    background-color: #f0f8ff; /* Fundo azul clarinho no hover */
-    transform: translateY(-2px); /* Efeito sutil de levantar */
+    color: #007bff;
+    background-color: #f0f8ff;
+    transform: translateY(-2px);
 }
 
-/* Efeito de sublinhado moderno no hover (opcional, remova se não gostar) */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -90,12 +88,12 @@ main {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #007bff; /* Cor do sublinhado */
+    background-color: #007bff;
     transition: width 0.3s ease-out;
 }
 
 .main-nav a:hover::after {
-    width: calc(100% - 2.4rem); /* Largura do sublinhado (padding horizontal x 2) */
+    width: calc(100% - 2.4rem);
 }
 
 
@@ -104,30 +102,31 @@ main {
     display: grid;
     /* Padrão para telas pequenas: uma coluna */
     grid-template-columns: 1fr;
-    gap: 2.5rem; /* Espaço entre os posts */
+    gap: 2.5rem;
 }
 
 /* Estilo individual de cada post */
 .post-card {
     background-color: #FFFFFF;
-    border-radius: 8px; /* Bordas arredondadas suaves */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais visível, mas suave */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    /* Certifique-se de que cada card seja um flex container de coluna */
+    /* Define a direção dos elementos dentro do card como coluna, garantindo que a imagem
+       fique acima do texto em todos os tamanhos de tela. */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 1px solid #F0F0F0; /* Borda super sutil */
+    border: 1px solid #F0F0F0;
 }
 
 .post-card:hover {
-    transform: translateY(-5px); /* Efeito sutil de levantar */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Sombra mais pronunciada no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .post-card img {
     width: 100%;
-    height: 280px; /* Altura fixa para as imagens */
+    height: 280px;
     object-fit: cover;
     display: block;
     border-bottom: 1px solid #EEEEEE;
@@ -135,7 +134,7 @@ main {
 
 /* Conteúdo do post */
 .post-content {
-    padding: 1.8rem; /* Espaçamento interno dos cards */
+    padding: 1.8rem;
 }
 
 .post-content h2 {
@@ -143,7 +142,7 @@ main {
     font-size: 1.9rem;
     margin-top: 0;
     color: #222222;
-    border-bottom: 1px solid #EEEEEE; /* Linha sutil no título */
+    border-bottom: 1px solid #EEEEEE;
     padding-bottom: 0.7rem;
     margin-bottom: 1.2rem;
     line-height: 1.3;
@@ -151,11 +150,11 @@ main {
 
 .post-content blockquote {
     font-style: italic;
-    border-left: 4px solid #007bff; /* Borda azul vibrante */
+    border-left: 4px solid #007bff;
     padding-left: 1.2rem;
     margin: 1.8rem 0;
     color: #555555;
-    background-color: #FBFBFB; /* Fundo quase branco para a citação */
+    background-color: #FBFBFB;
     border-radius: 4px;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
@@ -174,7 +173,7 @@ main {
 
 .post-content .date {
     font-size: 0.85rem;
-    color: #999999; /* Cinza mais claro para a data */
+    color: #999999;
     text-align: right;
     margin-top: 1.2rem;
     font-weight: 400;
@@ -184,8 +183,8 @@ main {
 .site-footer {
     text-align: center;
     padding: 2.5rem 1rem;
-    background-color: #333333; /* Fundo cinza escuro */
-    color: #FFFFFF; /* Texto branco */
+    background-color: #333333;
+    color: #FFFFFF;
     margin-top: 4rem;
     font-size: 0.9rem;
     border-top: 1px solid #444444;
@@ -195,7 +194,7 @@ main {
 .site-footer p {
     margin: 0.6rem 0;
     font-weight: 300;
-    color: #CCCCCC; /* Cinza claro para o texto do rodapé */
+    color: #CCCCCC;
 }
 
 
@@ -230,7 +229,8 @@ main {
 /* REGRAS PARA TELAS MAIORES */
 @media (min-width: 768px) {
     .blog-posts {
-        /* Cria duas colunas de tamanho igual */
+        /* Cria duas colunas de tamanho igual, permitindo que os cards inteiros
+           fiquem lado a lado */
         grid-template-columns: repeat(2, 1fr);
     }
 }
